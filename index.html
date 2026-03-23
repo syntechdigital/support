@@ -19,22 +19,107 @@
     }
   </style>
 </head>
+<!-- Language Switcher Section -->
+<div class="container py-3">
+  <div class="row text-center">
+    <!-- English -->
+    <div class="col-6 col-md-3 mb-2">
+      <div class="card shadow-sm">
+        <div class="card-body p-2">
+          <button class="btn btn-light w-100" onclick="switchLanguage('en')">
+            🇬🇧 English
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arabic -->
+    <div class="col-6 col-md-3 mb-2">
+      <div class="card shadow-sm">
+        <div class="card-body p-2">
+          <button class="btn btn-light w-100" onclick="switchLanguage('ar')">
+            🇸🇦 العربية
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- French -->
+    <div class="col-6 col-md-3 mb-2">
+      <div class="card shadow-sm">
+        <div class="card-body p-2">
+          <button class="btn btn-light w-100" onclick="switchLanguage('fr')">
+            🇫🇷 Français
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chinese -->
+    <div class="col-6 col-md-3 mb-2">
+      <div class="card shadow-sm">
+        <div class="card-body p-2">
+          <button class="btn btn-light w-100" onclick="switchLanguage('zh')">
+            🇨🇳 中文
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <body class="bg-light">
 <div class="container py-5">
+  <!-- Title Section -->
   <div class="text-center mb-5">
-    <h1 class="fw-bold text-danger">Help Vulnerable Families in Iran</h1>
+    <h1 class="fw-bold text-danger">
+      ❤️ Help Vulnerable Families in Iran
+    </h1>
     <p class="lead text-secondary">
-      The ongoing conflict has left countless families displaced, hungry, and without basic necessities. Together, we can make a difference.
+      🌍 The ongoing conflict has left countless families displaced, hungry, and without basic necessities. 
+      Together, we can make a difference. ✨
     </p>
   </div>
 
+  <!-- Video Section -->
   <div class="row align-items-center mb-5">
-    <div class="col-md-6">
-      <!-- Playable video instead of image -->
+    <!-- Local MP4 Video -->
+    <div class="col-md-6 mb-3">
+      <h5 class="fw-bold text-secondary">
+        🎥 Local Documentary
+      </h5>
       <video class="img-fluid rounded shadow" controls autoplay muted loop playsinline>
         <source src="https://media.istockphoto.com/id/1069100172/video/hungry-homeless-child-near-the-ruins-refugees.mp4?s=mp4-640x640-is&k=20&c=vgd48IUxH4osbJJB34vcwcE_c7iYamteiyhL5soEuAU=" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+            </video>
+    </div>
+
+    <!-- YouTube Video -->
+    <div class="col-md-6 mb-3">
+      <h5 class="fw-bold text-secondary">
+        📺Featured Video
+      </h5>
+      <div class="ratio ratio-16x9">
+        <iframe class="img-fluid rounded shadow"
+          src="https://www.youtube.com/embed/hU-r4L6n8sE"
+          title="YouTube video"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- YouTube video embed -->
+<div class="ratio ratio-16x9 mt-3">
+  <iframe class="img-fluid rounded shadow"
+    src="https://www.youtube.com/embed/vzo1yAltqyQ"
+    title="YouTube video"
+    allowfullscreen>
+  </iframe>
+</div>
+
     </div>
     <div class="col-md-6">
       <h2 class="fw-bold">The Disaster & Its Impact</h2>
@@ -83,7 +168,7 @@
           Recent direct attacks have escalated the confrontation, making the situation far more dangerous. 
           Innocent families are caught in the crossfire of this geopolitical struggle.
         </p>
-        <p><em>الحرب لا ترحم الأبرياء</em> (Arabic: War shows no mercy to the innocent.)</p>
+        <p><em>الحرب لا ترحم الأبرياء</em> (War shows no mercy to the innocent.)</p>
       </div>
       <div class="col-md-6">
         <img src="https://images.pexels.com/photos/36533585/pexels-photo-36533585.jpeg" 
@@ -109,40 +194,140 @@
         <p class="mb-4">Click below to donate securely via PayPal and explore other payment options.</p>
         <!-- Trigger button -->
         <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#donationModal">
-          <i class="fa-brands fa-paypal me-2"></i> Donate via PayPal
+  <i class="fa-solid fa-hand-holding-heart me-2"></i> Donate Now
+</button>
+
+      </div>
+    </div>
+  </div>
+<!-- Donation Modal -->
+<div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shadow">
+      <div class="modal-header bg-danger text-white">
+        <h5 class="modal-title" id="donationModalLabel">
+          <i class="fa-solid fa-hand-holding-heart me-2"></i> Support Options
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="small text-muted">Choose your preferred payment mode:</p>
+
+        <!-- PayPal -->
+        <a href="https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID" 
+           class="btn btn-outline-danger w-100 mb-2">
+          <i class="fa-brands fa-paypal me-2"></i> PayPal
+        </a>
+
+        <!-- Telegram -->
+        <a href="https://t.me/YOUR_TELEGRAM_USERNAME" 
+           class="btn btn-outline-primary w-100 mb-2">
+          <i class="fa-brands fa-telegram me-2"></i> Telegram Support
+        </a>
+
+        <!-- Other Payment trigger -->
+        <button type="button" class="btn btn-outline-success w-100 mb-2" data-bs-toggle="modal" data-bs-target="#otherPaymentModal">
+          <i class="fa-solid fa-credit-card me-2"></i> Other Payment
+        </button>
+
+        <!-- Crypto Payment trigger -->
+        <button type="button" class="btn btn-outline-dark w-100" data-bs-toggle="modal" data-bs-target="#cryptoModal">
+          <i class="fa-brands fa-bitcoin me-2"></i> Donate with Crypto
         </button>
       </div>
     </div>
   </div>
+</div>
 
-  <!-- Donation Modal -->
-  <div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content shadow">
-        <div class="modal-header bg-danger text-white">
-          <h5 class="modal-title" id="donationModalLabel">
-            <i class="fa-solid fa-hand-holding-heart me-2"></i> Support Options
-          </h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+<!-- Other Payment Modal -->
+<div class="modal fade" id="otherPaymentModal" tabindex="-1" aria-labelledby="otherPaymentModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shadow">
+      <div class="modal-header bg-success text-white">
+        <h5 class="modal-title" id="otherPaymentModalLabel">
+          <i class="fa-solid fa-credit-card me-2"></i> Other Payment Options
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="small text-muted">Copy the payment address of your preferred service:</p>
+
+        <!-- Google Pay -->
+        <h6 class="fw-bold text-secondary mb-1">Google Pay</h6>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="googlePayAddress" value="YOUR_GOOGLE_PAY_ADDRESS" readonly>
+          <button class="btn btn-outline-secondary" onclick="copyAddress('googlePayAddress')">Copy</button>
         </div>
-        <div class="modal-body">
-          <p class="small text-muted">Choose your preferred payment mode:</p>
-          <a href="https://www.paypal.com/donate?hosted_button_id=YOUR_BUTTON_ID" 
-             class="btn btn-outline-danger w-100 mb-2">
-            <i class="fa-brands fa-paypal me-2"></i> PayPal
-          </a>
-          <a href="https://t.me/YOUR_TELEGRAM_USERNAME" 
-             class="btn btn-outline-primary w-100 mb-2">
-            <i class="fa-brands fa-telegram me-2"></i> Telegram
-          </a>
-          <a href="YOUR_OTHER_PAYMENT_LINK" 
-             class="btn btn-outline-success w-100">
-            <i class="fa-solid fa-credit-card me-2"></i> Other Payment
-          </a>
+
+        <!-- Venmo -->
+        <h6 class="fw-bold text-secondary mb-1">Venmo</h6>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="venmoAddress" value="YOUR_VENMO_USERNAME_OR_LINK" readonly>
+          <button class="btn btn-outline-secondary" onclick="copyAddress('venmoAddress')">Copy</button>
+        </div>
+
+        <!-- Add more services if needed -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Crypto Modal -->
+<div class="modal fade" id="cryptoModal" tabindex="-1" aria-labelledby="cryptoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shadow">
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title" id="cryptoModalLabel">
+          <i class="fa-brands fa-bitcoin me-2"></i> Donate with Crypto
+        </h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p class="small text-muted">Copy the wallet address of your preferred crypto:</p>
+
+        <!-- USDT Address -->
+        <h6 class="fw-bold text-secondary mb-1">USDT Address</h6>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="usdtAddress" value="YOUR_USDT_WALLET_ADDRESS" readonly>
+          <button class="btn btn-outline-secondary" onclick="copyAddress('usdtAddress')">Copy</button>
+        </div>
+
+        <!-- BTC Address -->
+        <h6 class="fw-bold text-secondary mb-1">BTC Address</h6>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="btcAddress" value="YOUR_BTC_WALLET_ADDRESS" readonly>
+          <button class="btn btn-outline-secondary" onclick="copyAddress('btcAddress')">Copy</button>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<script>
+  function copyAddress(id) {
+    var copyText = document.getElementById(id);
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); // For mobile devices
+    navigator.clipboard.writeText(copyText.value);
+    alert("Copied: " + copyText.value);
+  }
+    function switchLanguage(lang) {
+    // Example: Replace text dynamically
+    if(lang === 'en') {
+      document.querySelector('h1').innerText = "❤️ Help Vulnerable Families in Iran";
+    }
+    if(lang === 'ar') {
+      document.querySelector('h1').innerText = "❤️ ساعد العائلات الضعيفة في إيران";
+    }
+    if(lang === 'fr') {
+      document.querySelector('h1').innerText = "❤️ Aider les familles vulnérables en Iran";
+    }
+    if(lang === 'zh') {
+      document.querySelector('h1').innerText = "❤️ 帮助伊朗的弱势家庭";
+    }
+    // You can extend this to swap all page content, not just the title
+  }
+</script>
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3 mt-5">
