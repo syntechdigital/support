@@ -9,147 +9,102 @@
   <!-- Font Awesome -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
   <style>
-    .section-title {
-      font-weight: bold;
-      color: #b22222;
-    }
-    hr.divider {
-      border-top: 2px solid #b22222;
-      margin: 3rem 0;
-    }
+    .section-title { font-weight: bold; color: #b22222; }
+    hr.divider { border-top: 2px solid #b22222; margin: 3rem 0; }
   </style>
 </head>
-<!-- Language Switcher Section -->
-<div class="container py-3">
-  <div class="row text-center">
-    <!-- English -->
-    <div class="col-6 col-md-3 mb-2">
-      <div class="card shadow-sm">
-        <div class="card-body p-2">
-          <button class="btn btn-light w-100" onclick="switchLanguage('en')">
-            🇬🇧 English
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Arabic -->
-    <div class="col-6 col-md-3 mb-2">
-      <div class="card shadow-sm">
-        <div class="card-body p-2">
-          <button class="btn btn-light w-100" onclick="switchLanguage('ar')">
-            🇸🇦 العربية
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- French -->
-    <div class="col-6 col-md-3 mb-2">
-      <div class="card shadow-sm">
-        <div class="card-body p-2">
-          <button class="btn btn-light w-100" onclick="switchLanguage('fr')">
-            🇫🇷 Français
-          </button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Chinese -->
-    <div class="col-6 col-md-3 mb-2">
-      <div class="card shadow-sm">
-        <div class="card-body p-2">
-          <button class="btn btn-light w-100" onclick="switchLanguage('zh')">
-            🇨🇳 中文
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
 
 <body class="bg-light">
-<div class="container py-5">
+  <!-- Header / Navbar -->
+  <nav class="navbar navbar-expand-md fixed-top" style="background-color:#004080;">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white fw-bold" href="#"><h1 class="fw-bold text-danger" data-i18n="header_title">❤️ Humanitarian Support Initiative</h1></a>
+      <button class="navbar-toggler text-white border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarLang">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarLang">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><button class="btn nav-link text-white" style="background-color:#1a73e8;" onclick="switchLanguage('en')">🇬🇧 English</button></li>
+          <li class="nav-item"><button class="btn nav-link text-white" style="background-color:#d93025;" onclick="switchLanguage('ar')">🇸🇦 العربية</button></li>
+          <li class="nav-item"><button class="btn nav-link text-dark fw-bold" style="background-color:#fbbc05;" onclick="switchLanguage('fr')">🇫🇷 Français</button></li>
+          <li class="nav-item"><button class="btn nav-link text-white" style="background-color:#34a853;" onclick="switchLanguage('zh')">🇨🇳 中文</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div style="padding-top:80px;"></div>
+
   <!-- Title Section -->
-  <div class="text-center mb-5">
-    <h1 class="fw-bold text-danger">
-      ❤️ Help Vulnerable Families in Iran
-    </h1>
-    <p class="lead text-secondary">
-      🌍 The ongoing conflict has left countless families displaced, hungry, and without basic necessities. 
-      Together, we can make a difference. ✨
-    </p>
+  <div class="container py-5 text-center">
+    <h1 class="fw-bold text-danger" data-i18n="main_title">❤️ Help Vulnerable Families in Iran</h1>
+    <p class="lead text-secondary" data-i18n="main_subtitle">🌍 The ongoing conflict has left countless families displaced, hungry, and without basic necessities. Together, we can make a difference. ✨</p>
+  </div>
+
+  <!-- Organization Section -->
+  <hr class="divider">
+  <div class="container py-5">
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <h2 class="section-title" data-i18n="org_title">About Our Organization</h2>
+        <p data-i18n="org_p1">Save a Life Initiative is a humanitarian organization that emerged in response to the urgent crisis affecting families across Iran and neighboring regions. Our mission is to provide food, shelter, and life-saving support.</p>
+        <p data-i18n="org_p2">With the support of donors around the world, we deliver essential aid directly to vulnerable communities, restoring hope and dignity where it is needed most.</p>
+      </div>
+      <div class="col-md-6 text-center">
+        <h3 class="fw-bold mb-3" data-i18n="org_support">Support Our Mission</h3>
+        <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#donationModal">
+          <i class="fa-solid fa-hand-holding-heart me-2"></i>
+          <span data-i18n="org_donate">Donate Now</span>
+        </button>
+      </div>
+    </div>
   </div>
 
   <!-- Video Section -->
-  <div class="row align-items-center mb-5">
-    <!-- Local MP4 Video -->
-    <div class="col-md-6 mb-3">
-      <h5 class="fw-bold text-secondary">
-        🎥 Local Documentary
-      </h5>
-      <video class="img-fluid rounded shadow" controls autoplay muted loop playsinline>
-        <source src="https://media.istockphoto.com/id/1069100172/video/hungry-homeless-child-near-the-ruins-refugees.mp4?s=mp4-640x640-is&k=20&c=vgd48IUxH4osbJJB34vcwcE_c7iYamteiyhL5soEuAU=" type="video/mp4">
-            </video>
-    </div>
-
-    <!-- YouTube Video -->
-    <div class="col-md-6 mb-3">
-      <h5 class="fw-bold text-secondary">
-        📺Featured Video
-      </h5>
-      <div class="ratio ratio-16x9">
-        <iframe class="img-fluid rounded shadow"
-          src="https://www.youtube.com/embed/hU-r4L6n8sE"
-          title="YouTube video"
-          allowfullscreen>
-        </iframe>
+  <div class="container py-5">
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6 mb-3">
+        <h5 class="fw-bold text-secondary" data-i18n="video_local_title">🎥 Local Documentary</h5>
+        <video class="img-fluid rounded shadow" controls autoplay muted loop playsinline>
+          <source src="https://media.istockphoto.com/id/1069100172/video/hungry-homeless-child-near-the-ruins-refugees.mp4?s=mp4-640x640-is&k=20&c=vgd48IUxH4osbJJB34vcwcE_c7iYamteiyhL5soEuAU=" type="video/mp4">
+        </video>
+      </div>
+      <div class="col-md-6 mb-3">
+        <h5 class="fw-bold text-secondary" data-i18n="video_featured_title">📺 Featured Video</h5>
+        <div class="ratio ratio-16x9">
+          <iframe class="img-fluid rounded shadow" src="https://www.youtube.com/embed/hU-r4L6n8sE" title="YouTube video" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
-  </div>
-</div>
-
-
-
-<!-- YouTube video embed -->
-<div class="ratio ratio-16x9 mt-3">
-  <iframe class="img-fluid rounded shadow"
-    src="https://www.youtube.com/embed/vzo1yAltqyQ"
-    title="YouTube video"
-    allowfullscreen>
-  </iframe>
-</div>
-
-    </div>
-    <div class="col-md-6">
-      <h2 class="fw-bold">The Disaster & Its Impact</h2>
-      <p>
-        War has devastated communities, destroyed homes, and torn families apart. Children are growing up without access to food, education, or healthcare. 
-        Vulnerable families urgently need support to survive and rebuild their lives.
-      </p>
-      <p>
-        Your donation will go directly toward providing food, shelter, and medical care to those most in need. Every contribution, no matter the size, brings hope.
-      </p>
+    <div class="ratio ratio-16x9 mt-3">
+      <iframe class="img-fluid rounded shadow" src="https://www.youtube.com/embed/vzo1yAltqyQ" title="YouTube video" allowfullscreen></iframe>
     </div>
   </div>
-</div>
 
+  <!-- Disaster & Impact Section -->
   <div class="container py-5">
+    <div class="row align-items-center mb-5">
+      <div class="col-md-6">
+        <h2 class="fw-bold" data-i18n="disaster_title">The Disaster & Its Impact</h2>
+        <p data-i18n="disaster_p1">War has devastated communities, destroyed homes, and torn families apart. Children are growing up without access to food, education, or healthcare. Vulnerable families urgently need support to survive and rebuild their lives.</p>
+        <p data-i18n="disaster_p2">Your donation will go directly toward providing food, shelter, and medical care to those most in need. Every contribution, no matter the size, brings hope.</p>
+      </div>
+      <div class="col-md-6">
+        <img src="https://images.pexels.com/photos/35934230/pexels-photo-35934230.jpeg" class="img-fluid rounded shadow" alt="Families affected">
+      </div>
+    </div>
+
+    <hr class="divider">
 
     <!-- Problem Section -->
     <div class="row align-items-center mb-5">
       <div class="col-md-6">
-        <h2 class="section-title">Problem / مشكلة</h2>
-        <p>
-          Families in Iran and across the region are suffering deeply from the ongoing war. 
-          Homes are destroyed, livelihoods lost, and children grow up without food, education, or healthcare. 
-          Vulnerable families are left with nothing but hope for help.
-        </p>
-        <p><em>Ailə faciəsi – insanlar evsiz, ac və köməksizdir.</em> (Azeri: Families face tragedy – homeless, hungry, and helpless.)</p>
+        <h2 class="section-title" data-i18n="problem_title">Problem / مشكلة</h2>
+        <p data-i18n="problem_p1">Families in Iran and across the region are suffering deeply from the ongoing war. Homes are destroyed, livelihoods lost, and children grow up without food, education, or healthcare. Vulnerable families are left with nothing but hope for help.</p>
+        <p data-i18n="problem_p2"><em>Ailə faciəsi – insanlar evsiz, ac və köməksizdir.</em> (Azeri: Families face tragedy – homeless, hungry, and helpless.)</p>
       </div>
       <div class="col-md-6">
-        <img src="https://images.pexels.com/photos/35934230/pexels-photo-35934230.jpeg" 
-             class="img-fluid rounded shadow" alt="Families affected">
+        <img src="https://images.pexels.com/photos/35934230/pexels-photo-35934230.jpeg" class="img-fluid rounded shadow" alt="Problem image">
       </div>
     </div>
 
@@ -158,21 +113,13 @@
     <!-- Cause Section -->
     <div class="row align-items-center mb-5">
       <div class="col-md-6">
-        <h2 class="section-title">Cause / السبب</h2>
-        <p>
-          The struggle between Iran and Israel is both ideological and strategic. 
-          Iran opposes Israel’s existence and expands influence through proxies. 
-          Israel fights to block Iran’s nuclear ambitions and regional dominance.
-        </p>
-        <p>
-          Recent direct attacks have escalated the confrontation, making the situation far more dangerous. 
-          Innocent families are caught in the crossfire of this geopolitical struggle.
-        </p>
-        <p><em>الحرب لا ترحم الأبرياء</em> (War shows no mercy to the innocent.)</p>
+        <h2 class="section-title" data-i18n="cause_title">Cause / السبب</h2>
+        <p data-i18n="cause_p1">The struggle between Iran and Israel is both ideological and strategic. Iran opposes Israel’s existence and expands influence through proxies. Israel fights to block Iran’s nuclear ambitions and regional dominance.</p>
+        <p data-i18n="cause_p2">Recent direct attacks have escalated the confrontation, making the situation far more dangerous. Innocent families are caught in the crossfire of this geopolitical struggle.</p>
+        <p data-i18n="cause_p3"><em>الحرب لا ترحم الأبرياء</em> (War shows no mercy to the innocent.)</p>
       </div>
       <div class="col-md-6">
-        <img src="https://images.pexels.com/photos/36533585/pexels-photo-36533585.jpeg" 
-             class="img-fluid rounded shadow" alt="Conflict image">
+        <img src="https://images.pexels.com/photos/36533585/pexels-photo-36533585.jpeg" class="img-fluid rounded shadow" alt="Conflict image">
       </div>
     </div>
 
@@ -181,26 +128,22 @@
     <!-- Solution Section -->
     <div class="row align-items-center mb-5">
       <div class="col-md-6">
-        <h2 class="section-title">Solution / حل</h2>
-        <p>
-          Together, we can provide food, shelter, and medical care to those most in need. 
-          Every donation, no matter the size, brings hope and relief to families devastated by war.
-        </p>
-        <p><em>Ümid paylaşmaq – həyatları xilas etməkdir.</em> (Azeri: Sharing hope means saving lives.)</p>
-        <p><em>العطاء هو طريق السلام</em> (Arabic: Giving is the path to peace.)</p>
+        <h2 class="section-title" data-i18n="solution_title">Solution / حل</h2>
+        <p data-i18n="solution_p1">Together, we can provide food, shelter, and medical care to those most in need. Every donation, no matter the size, brings hope and relief to families devastated by war.</p>
+        <p data-i18n="solution_p2">معًا، يمكننا أن نوفر الغذاء والمأوى والرعاية الطبية لأولئك الأكثر حاجة. كل تبرع، مهما كان حجمه، يجلب الأمل والراحة للأسر التي دمرتها الحرب.</p>
+        <p data-i18n="solution_p3"><em>Ümid paylaşmaq – həyatları xilas etməkdir.</em> (Azeri: Sharing hope means saving lives.)</p>
+        <p data-i18n="solution_p4"><em>العطاء هو طريق السلام</em> (Arabic: Giving is the path to peace.)</p>
       </div>
       <div class="col-md-6 text-center">
-        <h3 class="fw-bold mb-3">Support Now</h3>
-        <p class="mb-4">Click below to donate securely via PayPal and explore other payment options.</p>
-        <!-- Trigger button -->
+        <h3 class="fw-bold mb-3" data-i18n="support_title">Support Now</h3>
+        <p class="mb-4" data-i18n="support_subtitle">Click below to donate securely via PayPal and explore other payment options.</p>
         <button type="button" class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#donationModal">
-  <i class="fa-solid fa-hand-holding-heart me-2"></i> Donate Now
-</button>
-
+          <i class="fa-solid fa-hand-holding-heart me-2"></i> <span data-i18n="donate_btn">Donate Now</span>
+        </button>
       </div>
     </div>
-  </div>
-<!-- Donation Modal -->
+  </div> 
+  <!-- Donation Modal -->
 <div class="modal fade" id="donationModal" tabindex="-1" aria-labelledby="donationModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content shadow">
@@ -265,8 +208,6 @@
           <input type="text" class="form-control" id="venmoAddress" value="YOUR_VENMO_USERNAME_OR_LINK" readonly>
           <button class="btn btn-outline-secondary" onclick="copyAddress('venmoAddress')">Copy</button>
         </div>
-
-        <!-- Add more services if needed -->
       </div>
     </div>
   </div>
@@ -302,39 +243,186 @@
     </div>
   </div>
 </div>
-
-<script>
-  function copyAddress(id) {
-    var copyText = document.getElementById(id);
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); // For mobile devices
-    navigator.clipboard.writeText(copyText.value);
-    alert("Copied: " + copyText.value);
-  }
-    function switchLanguage(lang) {
-    // Example: Replace text dynamically
-    if(lang === 'en') {
-      document.querySelector('h1').innerText = "❤️ Help Vulnerable Families in Iran";
-    }
-    if(lang === 'ar') {
-      document.querySelector('h1').innerText = "❤️ ساعد العائلات الضعيفة في إيران";
-    }
-    if(lang === 'fr') {
-      document.querySelector('h1').innerText = "❤️ Aider les familles vulnérables en Iran";
-    }
-    if(lang === 'zh') {
-      document.querySelector('h1').innerText = "❤️ 帮助伊朗的弱势家庭";
-    }
-    // You can extend this to swap all page content, not just the title
-  }
-</script>
-
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3 mt-5">
-    <p class="mb-0">&copy; 2026 Humanitarian Support Initiative. All rights reserved.</p>
+    <p class="mb-0" data-i18n="footer_text">&copy; 2026 Humanitarian Support Initiative. All rights reserved.</p>
   </footer>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Language Switcher Script -->
+  <script>
+    const translations = {
+      en: {
+        header_title: "❤️ Humanitarian Support Initiative",
+        main_title: "❤️ Help Vulnerable Families in Iran",
+        main_subtitle: "🌍 The ongoing conflict has left countless families displaced, hungry, and without basic necessities. Together, we can make a difference. ✨",
+        org_title: "About Our Organization",
+        org_p1: "Save a Life Initiative is a humanitarian organization that emerged in response to the urgent crisis affecting families across Iran and neighboring regions. Our mission is to provide food, shelter, and life-saving support.",
+        org_p2: "With the support of donors around the world, we deliver essential aid directly to vulnerable communities, restoring hope and dignity where it is needed most.",
+        org_support: "Support Our Mission",
+        org_donate: "Donate Now",
+        video_local_title: "🎥 Local Documentary",
+        video_featured_title: "📺 Featured Video",
+        disaster_title: "The Disaster & Its Impact",
+        disaster_p1: "War has devastated communities, destroyed homes, and torn families apart. Children are growing up without access to food, education, or healthcare. Vulnerable families urgently need support to survive and rebuild their lives.",
+        disaster_p2: "Your donation will go directly toward providing food, shelter, and medical care to those most in need. Every contribution, no matter the size, brings hope.",
+        problem_title: "Problem / مشكلة",
+        problem_p1: "Families in Iran and across the region are suffering deeply from the ongoing war. Homes are destroyed, livelihoods lost, and children grow up without food, education, or healthcare. Vulnerable families are left with nothing but hope for help.",
+        problem_p2: "Ailə faciəsi – insanlar evsiz, ac və köməksizdir. (Azeri: Families face tragedy – homeless, hungry, and helpless.)",
+        cause_title: "Cause / السبب",
+        cause_p1: "The struggle between Iran and Israel is both ideological and strategic. Iran opposes Israel’s existence and expands influence through proxies. Israel fights to block Iran’s nuclear ambitions and regional dominance.",
+        cause_p2: "Recent direct attacks have escalated the confrontation, making the situation far more dangerous. Innocent families are caught in the crossfire of this geopolitical struggle.",
+        cause_p3: "الحرب لا ترحم الأبرياء (War shows no mercy to the innocent.)",
+        solution_title: "Solution / حل",
+        solution_p1: "Together, we can provide food, shelter, and medical care to those most in need. Every donation, no matter the size, brings hope and relief to families devastated by war.",
+        solution_p2: "معًا، يمكننا أن نوفر الغذاء والمأوى والرعاية الطبية لأولئك الأكثر حاجة. كل تبرع، مهما كان حجمه، يجلب الأمل والراحة للأسر التي دمرتها الحرب.",
+        solution_p3: "Ümid paylaşmaq – həyatları xilas etməkdir. (Azeri: Sharing hope means saving lives.)",
+        solution_p4: "العطاء هو طريق السلام (Arabic: Giving is the path to peace.)",
+        support_title: "Support Now",
+        support_subtitle: "Click below to donate securely via PayPal and explore other payment options.",
+        donate_btn: "Donate Now",
+        modal_title: "Support Options",
+        modal_subtitle: "Choose your preferred payment mode:",
+        footer_text: "© 2026 Humanitarian Support Initiative. All rights reserved."
+      },
+      ar: {
+        header_title: "❤️ مبادرة الدعم الإنساني",
+        main_title: "❤️ ساعد العائلات الضعيفة في إيران",
+        main_subtitle: "🌍 النزاع الحالي ترك العديد من العائلات مشردة وجائعة وبدون احتياجات أساسية. معًا، يمكننا أن نصنع فرقًا. ✨",
+        org_title: "عن منظمتنا",
+        org_p1: "مبادرة إنقاذ الحياة هي منظمة إنسانية نشأت استجابةً للأزمة العاجلة التي تؤثر على العائلات في إيران والمناطق المجاورة. مهمتنا هي توفير الغذاء والمأوى والدعم المنقذ للحياة.",
+        org_p2: "بدعم المتبرعين حول العالم، نوصل المساعدات الأساسية مباشرةً للمحتاجين ونُعيد الأمل والكرامة حيثما دعت الحاجة.",
+        org_support: "ادعم مهمتنا",
+        org_donate: "تبرع الآن",
+        video_local_title: "🎥 الفيلم الوثائقي المحلي",
+        video_featured_title: "📺 الفيديو المميز",
+        disaster_title: "الكارثة وتأثيرها",
+        disaster_p1: "الحرب دمرت المجتمعات وأتلفت المنازل ومزقت العائلات. الأطفال ينشأون بدون طعام أو تعليم أو رعاية صحية. تحتاج الأسر الضعيفة إلى الدعم للبقاء على قيد الحياة وإعادة بناء حياتهم.",
+               problem_p1: "تعاني الأسر في إيران والمناطق المجاورة بشدة بسبب الحرب المستمرة. المنازل مدمرة، سبل العيش مفقودة، والأطفال ينشأون بدون طعام أو تعليم أو رعاية صحية. الأسر الضعيفة تُترك بلا شيء سوى الأمل في المساعدة.",
+        problem_p2: "Ailə faciəsi – الناس بلا مأوى، جائعون وعاجزون. (Azeri: Families face tragedy – homeless, hungry, and helpless.)",
+        cause_title: "السبب",
+        cause_p1: "الصراع بين إيران وإسرائيل هو صراع أيديولوجي واستراتيجي. تعارض إيران وجود إسرائيل وتوسع نفوذها عبر وكلاء. تحارب إسرائيل لمنع الطموحات النووية الإيرانية والسيطرة الإقليمية.",
+        cause_p2: "الهجمات المباشرة الأخيرة زادت التصعيد، مما يجعل الوضع أكثر خطورة. الأسر البريئة عالقة في تبادل النيران لهذا الصراع الجيوسياسي.",
+        cause_p3: "الحرب لا ترحم الأبرياء",
+        solution_title: "الحل",
+        solution_p1: "معًا، يمكننا توفير الغذاء والمأوى والرعاية الطبية لأولئك الأكثر حاجة. كل تبرع، مهما كان حجمه، يجلب الأمل والراحة للأسر التي دمرتها الحرب.",
+        solution_p2: "معًا، يمكننا أن نوفر الغذاء والمأوى والرعاية الطبية لأولئك الأكثر حاجة. كل تبرع، مهما كان حجمه، يجلب الأمل والراحة للأسر التي دمرتها الحرب.",
+        solution_p3: "Ümid paylaşmaq – حياة الناس تنقذ. (Azeri: Sharing hope means saving lives.)",
+        solution_p4: "العطاء هو طريق السلام",
+        support_title: "ادعم الآن",
+        support_subtitle: "انقر أدناه للتبرع بأمان عبر PayPal واستكشاف خيارات الدفع الأخرى.",
+        donate_btn: "تبرع الآن",
+        modal_title: "خيارات الدعم",
+        modal_subtitle: "اختر طريقة الدفع المفضلة لديك:",
+        footer_text: "© 2026 مبادرة الدعم الإنساني. جميع الحقوق محفوظة."
+      },
+      fr: {
+        header_title: "❤️ Initiative de Soutien Humanitaire",
+        main_title: "❤️ Aider les familles vulnérables en Iran",
+        main_subtitle: "🌍 Le conflit en cours a laissé de nombreuses familles déplacées, affamées et sans besoins de base. Ensemble, nous pouvons faire la différence. ✨",
+        org_title: "À propos de notre organisation",
+        org_p1: "Save a Life Initiative est une organisation humanitaire créée pour répondre à la crise urgente touchant les familles en Iran et dans les régions voisines. Notre mission est de fournir nourriture, abri et assistance vitale.",
+        org_p2: "Grâce aux donateurs du monde entier, nous apportons une aide essentielle et redonnons espoir et dignité aux plus vulnérables.",
+        org_support: "Soutenir notre mission",
+        org_donate: "Faire un don",
+        video_local_title: "🎥 Documentaire local",
+        video_featured_title: "📺 Vidéo en vedette",
+        disaster_title: "La catastrophe et son impact",
+        disaster_p1: "La guerre a dévasté les communautés, détruit des maisons et séparé des familles. Les enfants grandissent sans accès à la nourriture, à l’éducation ou aux soins de santé. Les familles vulnérables ont besoin d’un soutien urgent pour survivre et reconstruire leur vie.",
+        disaster_p2: "Votre don ira directement pour fournir nourriture, abri et soins médicaux à ceux qui en ont le plus besoin. Chaque contribution, quelle que soit sa taille, apporte de l’espoir.",
+        problem_title: "Problème",
+        problem_p1: "Les familles en Iran et dans la région souffrent profondément de la guerre en cours. Les maisons sont détruites, les moyens de subsistance perdus, et les enfants grandissent sans nourriture, éducation ni soins médicaux. Les familles vulnérables ne disposent que de l'espoir d'aide.",
+        problem_p2: "Ailə faciəsi – les familles sont sans abri, affamées et démunies. (Azeri: Families face tragedy – homeless, hungry, and helpless.)",
+        cause_title: "Cause",
+        cause_p1: "La lutte entre l’Iran et Israël est à la fois idéologique et stratégique. L’Iran s’oppose à l’existence d’Israël et étend son influence par des mandataires. Israël lutte pour bloquer les ambitions nucléaires de l’Iran et sa domination régionale.",
+        cause_p2: "Les attaques directes récentes ont intensifié la confrontation, rendant la situation beaucoup plus dangereuse. Les familles innocentes se retrouvent prises dans le feu croisé de ce conflit géopolitique.",
+        cause_p3: "La guerre ne fait pas de pitié pour les innocents.",
+        solution_title: "Solution",
+        solution_p1: "Ensemble, nous pouvons fournir nourriture, abri et soins médicaux à ceux qui en ont le plus besoin. Chaque don, quelle que soit sa taille, apporte espoir et soulagement aux familles dévastées par la guerre.",
+        solution_p2: "Avec le soutien de tous, nous apportons une aide concrète là où elle est nécessaire.",
+        solution_p3: "Ümid paylaşmaq – sauver des vies. (Azeri: Sharing hope means saving lives.)",
+        solution_p4: "Donner est le chemin de la paix.",
+        support_title: "Soutenir maintenant",
+        support_subtitle: "Cliquez ci-dessous pour faire un don en toute sécurité via PayPal et explorer d’autres options de paiement.",
+        donate_btn: "Faire un don",
+        modal_title: "Options de soutien",
+        modal_subtitle: "Choisissez votre mode de paiement préféré :",
+        footer_text: "© 2026 Initiative de Soutien Humanitaire. Tous droits réservés."
+      },
+      zh: {
+        header_title: "❤️ 人道主义支持倡议",
+        main_title: "❤️ 帮助伊朗的弱势家庭",
+        main_subtitle: "🌍 持续的冲突使无数家庭流离失所、饥饿且缺乏基本生活必需品。一起，我们可以改变现状。✨",
+        org_title: "关于我们的组织",
+        org_p1: "拯救生命倡议是一个人道主义组织，旨在帮助受伊朗及周边地区危机影响的家庭。我们的使命是提供食物、住所和生命支持。",
+        org_p2: "在全球捐助者的支持下，我们向最需要的人提供援助，恢复希望与尊严。",
+        org_support: "支持我们的使命",
+        org_donate: "立即捐赠",
+        video_local_title: "🎥 本地纪录片",
+        video_featured_title: "📺 精选视频",
+        disaster_title: "灾难及其影响",
+        disaster_p1: "战争摧毁了社区、毁坏了房屋、撕裂了家庭。孩子们在没有食物、教育或医疗的环境中成长。弱势家庭急需支持以生存和重建生活。",
+        disaster_p2: "您的捐款将直接用于向最需要的人提供食物、住所和医疗护理。每一份捐赠，无论大小，都能带来希望。",
+        problem_title: "问题",
+        problem_p1: "伊朗及周边地区的家庭因持续战争深受影响。房屋被毁，生计丧失，孩子们在没有食物、教育或医疗的环境中成长。弱势家庭只能寄希望于援助。",
+        problem_p2: "Ailə faciəsi – 家庭无家可归、饥饿、无助。(Azeri: Families face tragedy – homeless, hungry, and helpless.)",
+        cause_title: "原因",
+        cause_p1: "伊朗与以色列之间的斗争既是意识形态的也是战略性的。伊朗反对以色列的存在并通过代理扩展影响力。以色列努力阻止伊朗的核野心和地区统治。",
+        cause_p2: "最近的直接攻击加剧了对抗，使局势更加危险。无辜家庭被卷入地缘政治冲突。",
+        cause_p3: "战争不怜悯无辜者。",
+        solution_title: "解决方案",
+        solution_p1: "我们可以一起为最需要的人提供食物、住所和医疗护理。每一份捐赠，无论大小，都能带来希望和救助。",
+        solution_p2: "在大家的支持下，我们为最需要的人提供切实援助。",
+        solution_p3: "Ümid paylaşmaq – 拯救生命。(Azeri: Sharing hope means saving lives.)",
+        solution_p4: "奉献是通向和平的道路。",
+        support_title: "立即支持",
+        support_subtitle: "点击下方通过 PayPal 安全捐赠并探索其他支付选项。",
+        donate_btn: "立即捐赠",
+        modal_title: "支持选项",
+        modal_subtitle: "选择您偏好的支付方式：",
+        footer_text: "© 2026 人道主义支持倡议。保留所有权利。"
+      }
+    };
+
+    function switchLanguage(lang) {
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        if(translations[lang][key]) {
+          el.innerText = translations[lang][key];
+        }
+      });
+      document.body.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+    }
+     // Grab the crypto modal
+  const cryptoModal = document.getElementById('cryptoModal');
+
+  // Listen for when it is fully hidden
+  cryptoModal.addEventListener('hidden.bs.modal', function () {
+    // Option 1: Refresh the page
+    window.location.reload();
+
+    // Option 2: If you only want to show the container again without full reload:
+    // document.getElementById('pageContainer').style.display = 'block';
+  });
+    function copyAddress(id) {
+    const input = document.getElementById(id);
+    const value = input.value;
+
+    // Use the modern clipboard API
+    navigator.clipboard.writeText(value)
+      .then(() => {
+        alert("Copied: " + value);
+      })
+      .catch(err => {
+        console.error("Failed to copy: ", err);
+        // Fallback for older browsers
+        input.select();
+        document.execCommand("copy");
+        alert("Copied (fallback): " + value);
+      });
+  }
+    </script>
 </body>
 </html>
